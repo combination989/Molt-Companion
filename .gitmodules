@@ -1,0 +1,4 @@
+[submodule "opensouls"]
+	path = opensouls
+	url = https://github.com/opensouls/opensouls.git
+	branch = main

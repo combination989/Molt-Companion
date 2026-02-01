@@ -1,0 +1,21 @@
+{
+  "name": "kalshagent-soul",
+  "version": "1.0.0",
+  "description": "KalshAgent AI Soul - A knowledgeable and friendly assistant",
+  "type": "module",
+  "main": "soul/soul.ts",
+  "scripts": {
+    "dev": "soul-engine dev",
+    "build": "soul-engine build",
+    "register": "soul-engine register"
+  },
+  "dependencies": {
+    "@opensouls/engine": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
