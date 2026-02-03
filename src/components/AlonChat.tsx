@@ -241,30 +241,7 @@ export function AlonChat() {
 
   return (
     <div className="fixed inset-0 z-10 w-full h-full overflow-hidden">
-      {/* CA Address Top Left - Always Visible */}
-      <div
-        className="animate-in fade-in slide-in-from-top-4 duration-700 delay-300"
-        style={{
-          position: "absolute",
-          top: "20px",
-          left: "20px",
-          zIndex: 30,
-          fontSize: "12px",
-          color: "#FAFAFA",
-          fontFamily: "'Space Grotesk', sans-serif",
-          fontWeight: "600",
-          backgroundColor: "rgba(24, 24, 27, 0.6)",
-          padding: "10px 16px",
-          borderRadius: "12px",
-          backdropFilter: "blur(12px)",
-          border: "1px solid rgba(220, 38, 38, 0.4)",
-          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-          letterSpacing: "0.05em",
-        }}
-      >
-        <span style={{ color: "#DC2626", marginRight: "8px" }}>CA</span>
-        <span className="opacity-90">CP6BiTg5H8dPE7UeyA8bGCMnWGVsp5bHhngdPQDMpump</span>
-      </div>
+
 
       {/* Alon Avatar Background */}
       <AlonScene isSpeaking={isSpeaking} />
