@@ -3,7 +3,6 @@ import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
-import Beams from "@/components/Beams";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -48,11 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${dmSans.variable} ${spaceGrotesk.variable} antialiased bg-black`}
         style={{ fontFamily: "'DM Sans', sans-serif" }}
         suppressHydrationWarning
       >
-        <Beams />
         <ConditionalLayout>
           {children}
         </ConditionalLayout>

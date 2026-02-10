@@ -19,7 +19,10 @@ import {
     Terminal as TerminalIcon,
     ArrowLeft,
     Bookmark,
-    ChevronRight
+    ChevronRight,
+    ChevronLeft,
+    ChevronsLeft,
+    ChevronsRight
 } from "lucide-react"
 import Link from "next/link"
 import { isBookmarked, toggleBookmark } from "@/lib/bookmarks"
@@ -42,6 +45,9 @@ export default function SkillsPage() {
     const [data, setData] = useState<MultiAgentData | null>(null)
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemsPerPage = 9 // 3x3 grid
+
 
     useEffect(() => {
         fetch('/data.json')
@@ -49,6 +55,11 @@ export default function SkillsPage() {
             .then(jsonData => setData(jsonData))
             .catch(err => console.error('Failed to load data:', err))
     }, [])
+
+    // Reset to page 1 when filters change
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [searchQuery, selectedCategory])
 
     if (!data) {
         return (
@@ -79,6 +90,16 @@ export default function SkillsPage() {
 
         return matchesSearch && matchesCategory
     })
+
+    const totalPages = Math.ceil(filteredSkills.length / itemsPerPage)
+    const startIndex = (currentPage - 1) * itemsPerPage
+    const paginatedSkills = filteredSkills.slice(startIndex, startIndex + itemsPerPage)
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
 
     return (
         <div className="w-full p-6 space-y-8 bg-gradient-to-br from-background via-background to-red-500/5">
@@ -142,10 +163,54 @@ export default function SkillsPage() {
 
             {/* Skills Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredSkills.map((skill) => (
+                {paginatedSkills.map((skill) => (
                     <SkillCard key={skill.id} skill={skill} />
                 ))}
             </div>
+
+            {/* Pagination Controls */}
+            {filteredSkills.length > itemsPerPage && (
+                <div className="flex items-center justify-center gap-2 mt-8">
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => handlePageChange(1)}
+                        disabled={currentPage === 1}
+                    >
+                        <ChevronsLeft className="h-4 w-4" />
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                    >
+                        <ChevronLeft className="h-4 w-4" />
+                    </Button>
+
+                    <span className="text-sm text-muted-foreground mx-2">
+                        Page {currentPage} of {totalPages}
+                    </span>
+
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                    >
+                        <ChevronRight className="h-4 w-4" />
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={() => handlePageChange(totalPages)}
+                        disabled={currentPage === totalPages}
+                    >
+                        <ChevronsRight className="h-4 w-4" />
+                    </Button>
+                </div>
+            )}
+
 
             {filteredSkills.length === 0 && (
                 <div className="text-center py-12">
@@ -156,8 +221,10 @@ export default function SkillsPage() {
 
             {/* Stats */}
             <div className="text-center text-sm text-muted-foreground py-8 border-t">
-                Showing {filteredSkills.length} of {data.skills.length} skills
+                Showing {startIndex + 1}-{Math.min(startIndex + itemsPerPage, filteredSkills.length)} of {filteredSkills.length} skills
+                {data.skills.length !== filteredSkills.length && ` (filtered from ${data.skills.length} total)`}
             </div>
+
         </div>
     )
 }
