@@ -1,3 +1,4 @@
+https://x.com/moltm732?s=21
 # 🦞 Molt Companion Multi-Agent AI
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
@@ -10,7 +11,7 @@
 
 **Molt Companion** isn't just a dashboard—it's a living, breathing AI ecosystem. Powered by the **OpenSouls Framework**, it combines specialized agents, deep cognitive skills, and a stunning retro-futuristic terminal interface into one powerful workflow engine.
 
-- https://x.com/moltm732?s=21--https://www.moltcompanion.tech/
+--https://www.moltcompanion.tech/
 
 ## 🌟 Visual & Functional Highlights
 
