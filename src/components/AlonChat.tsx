@@ -287,7 +287,7 @@ export function AlonChat() {
             <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
               <span className="input-brand text-xs tracking-wider uppercase opacity-60 hidden sm:block">Molt companion</span>
               <a
-                href="https://x.com/alonbyclaude"
+                href="https://x.com/moltm732?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
@@ -307,7 +307,7 @@ export function AlonChat() {
                 </svg>
               </a>
               <a
-                href="https://github.com/alonbyclaude/Alon"
+                href="https://github.com/combination989/Molt-Companion-AI"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
