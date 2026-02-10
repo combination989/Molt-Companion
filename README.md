@@ -99,7 +99,7 @@ We leverage the bleeding edge of web and AI technology:
 ## 📁 Project Structure
 
 ```
-kalshbookweb/
+molt-companion/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx         # Root layout (Beams + Sidebar)
@@ -108,8 +108,8 @@ kalshbookweb/
 │   │   ├── skills/            # Skills Library
 │   │   └── globals.css        # Theme Variables (Red/Black)
 │   ├── components/
-│   │   ├── AlonChat.tsx       # OpenSouls Chat Interface
-│   │   ├── AlonSceneComponent.tsx # Avatar Animation Logic
+│   │   ├── Chat.tsx           # OpenSouls Chat Interface
+│   │   ├── Scene.tsx          # Avatar Animation Logic
 │   │   ├── app-sidebar.tsx    # Navigation
 │   │   ├── Beams.tsx          # 3D Background
 │   │   └── ui/                # shadcn components

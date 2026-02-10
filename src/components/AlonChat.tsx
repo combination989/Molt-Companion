@@ -318,7 +318,7 @@ export function AlonChat() {
                 </svg>
               </a>
               <a
-                href="https://github.com/combination989/Molt-Companion-AI"
+                href="https://github.com/combination989/Molt-Companion.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
