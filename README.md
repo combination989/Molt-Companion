@@ -70,8 +70,8 @@ We leverage the bleeding edge of web and AI technology:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/combination989/Molt-Companion-AI.git
-   cd Molt-Companion-AI
+   git clone https://github.com/combination989/Molt-Companion.git
+   cd Molt-Companion
    ```
 
 2. **Install dependencies**

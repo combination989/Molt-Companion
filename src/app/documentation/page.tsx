@@ -64,7 +64,7 @@ export default function DocumentationPage() {
             title: "GitHub Repository",
             description: "View source code, report issues, and contribute",
             icon: Github,
-            link: "https://github.com/combination989/Molt-Companion.git",
+            link: "https://github.com/combination989/Molt-Companion",
             badge: "Open Source"
         },
         {
@@ -207,7 +207,7 @@ export default function DocumentationPage() {
                                     Command Reference
                                 </Button>
                             </Link>
-                            <Link href="https://github.com/combination989/Molt-Companion.git" target="_blank" rel="noopener noreferrer">
+                            <Link href="https://github.com/combination989/Molt-Companion" target="_blank" rel="noopener noreferrer">
                                 <Button variant="outline">
                                     <Github className="w-4 h-4 mr-2" />
                                     GitHub

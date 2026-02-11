@@ -116,7 +116,7 @@ export default function MoltCompanionPage() {
                             View Bookmarks
                         </Button>
                     </Link>
-                    <Link href="https://github.com/combination989/Molt-Companion.git" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://github.com/combination989/Molt-Companion" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline">
                             <ExternalLink className="mr-2 w-4 h-4" />
                             View on GitHub
