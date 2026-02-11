@@ -298,7 +298,7 @@ export function AlonChat() {
               </a>
               <span className="input-brand text-xs tracking-wider uppercase opacity-60 hidden sm:block">Molt companion</span>
               <a
-                href="https://x.com/moltm732?s=21"
+                href="https://x.com/moltcompanion9"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
