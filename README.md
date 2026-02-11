@@ -1,4 +1,4 @@
-https://x.com/moltm732?s=21
+https://x.com/moltcompanion9
 # 🦞 Molt Companion Multi-Agent AI
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
